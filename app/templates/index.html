@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/miscpages-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <title>Get weather for tomorrow</title>
+    <style>
+        body: {
+            background-image: url(img/weather-img.png);
+            background-color: #c7b39b;
+        }
+
+        .weather-img {
+            margin-left: 33px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            float: left;
+        }
+
+        .slider-short {
+            height: 200px;
+            background-image: url(../img/slider-img-shorten.jpg);
+            position: relative;
+        }
+        
+        .form-control {
+            width: 150px;
+            height: auto;
+            position: relative;
+            display: inline-block;
+            padding-left: 5px;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        
+        .form-label {
+            width: 350px;
+            height: auto;
+            position: relative;
+            display: inline-block;
+            padding-left: 35px;
+        }
+        
+        .btn-predict {
+            margin: 20px;
+            margin-left: 100px;
+            height: 35px;
+            width: 150px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header contact-us">
+            <div class="slider-short padding-site">
+                <div class="header clearfix">
+                    <a href="index.html"><img src="img/logo_weather.png" alt="logo"></a>
+
+                    <ul class="menu clearfix">
+                        <li class="menu-list"><a href="index.html" class=" menu-link">HOME</a></li>
+                        <li class="menu-list"><a href="#" class="menu-link">PREDICT WEATHER</a></li>
+                        <li class="menu-list"><a href="contact-us.html" class="menu-link">CONTACT US</a></li>
+                        <li class="menu-list"><a href="#" class="menu-link"><img src="img/search.svg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="content clearfix">
+            <h3>Сегодня {{current_date}}</h3>
+            <div>
+                <form action="/weather/api/v1.0/index" method="post">
+
+                    <div class="form-group">
+                        <label class="form-label">Месторасположение (Австралия)</label>
+                        <select name='location' id="location" class="form-control">
+                            <option value='Adelaide'>Adelaide</option>
+                            <option value='Albany'>Albany</option>
+                            <option value='Albury'>Albury</option>
+                            <option value='AliceSprings'>Alice Springs</option>
+                            <option value='BadgerysCreek'>Badgerys Creek</option>
+                            <option value='Ballarat'>Ballarat</option>
+                            <option value='Bendigo'>Bendigo</option>
+                            <option value='Brisbane'>Brisbane</option>
+                            <option value='Canberra'>Canberra</option>
+                            <option value='Cairns'>Cairns</option>
+                            <option value='Cobar'>Cobar</option>
+                            <option value='CoffsHarbour'>Coffs Harbour</option>
+                            <option value='Dartmoor'>Dartmoor</option>
+                            <option value='Darwin'>Darwin</option>
+                            <option value='GoldCoast'>GoldCoast</option>
+                            <option value='Hobart'>Hobart</option>
+                            <option value='Katherine'>Katherine</option>
+                            <option value='Launceston'>Launceston</option>
+                            <option value='Melbourne'>Melbourne</option>
+                            <option value='MelbourneAirport'>Melbourne Airport</option>
+                            <option value='Mildura'>Mildura</option>
+                            <option value='Moree'>Moree</option>
+                            <option value='MountGambier'>Mount Gambier</option>
+                            <option value='MountGinini'>Mount Ginini</option>
+                            <option value='Newcastle'>Newcastle</option>
+                            <option value='Nhil'>Nhil</option>
+                            <option value='NorahHead'>NorahHead</option>
+                            <option value='NorfolkIsland'>NorfolkIsland</option>
+                            <option value='Nuriootpa'>С</option>
+                            <option value='PearceRAAF'>Pearce RAAF</option>
+                            <option value='Perth'>Perth</option>
+                            <option value='PerthAirport'>Perth Airport</option>
+                            <option value='Penrith'>Penrith</option>
+                            <option value='Portland'>Portland</option>
+                            <option value='Richmond'>Richmond</option>
+                            <option value='Sale'>Sale</option>
+                            <option value='SalmonGums'>Salmon Gums</option>
+                            <option value='Sydney'>Sydney</option>
+                            <option value='SydneyAirport'>Sydney Airport</option>
+                            <option value='Townsville'>Townsville</option>
+                            <option value='Tuggeranong'>Tuggeranong</option>
+                            <option value='Uluru'>Uluru</option>
+                            <option value='WaggaWagga'>WaggaWagga</option>
+                            <option value='Walpole'>Walpole</option>
+                            <option value=' Watsonia'>Watsonia</option>
+                            <option value='Williamtow'>Williamtow</option>
+                            <option value='Witchcliffe'>Witchcliffe</option>
+                            <option value='Wollongong'>Wollongong</option>
+                            <option value='Woomera'>Woomera</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Минимальная температура сегодня, С</label>
+                        <input type="text" value=25 name="minTemp" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Максимальная температура сегодня, С</label>
+                        <input type="text" value=28 name="maxTemp" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Осадки</label>
+                        <input type="text" value=0.25 name="rainFall" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Испарения</label>
+                        <input type="text" value=5.0 name="evaporation" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Интенсивность солнечного излучения</label>
+                        <input type="text" value=10.0 name="sunshine" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Направление порывов ветра</label>
+                        <select name="windGustDir" class="form-control">
+                            <option value='N'>С</option>
+                            <option value='NNE'>ССВ</option>
+                            <option value='NE'>СВ</option>
+                            <option value='ENE'>ВСВ</option>
+                            <option value='E'>В</option>
+                            <option value='ESE'>ВЮВ</option>
+                            <option value='SE'>ЮВ</option>
+                            <option value='SSE'>ЮЮВ</option>
+                            <option value='S'>Ю</option>
+                            <option value='SSW'>ЮЮЗ</option>
+                            <option value='SW'>ЮЗ</option>
+                            <option value='WSW'>ЗЮЗ</option>
+                            <option value='W'>З</option>
+                            <option value='NNW'>ССЗ</option>
+                            <option value='WNW'>ЗСЗ</option>
+                            <option value='NW'>СЗ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Скорость порывов ветра, м/с</label>
+                        <input type="text" value=30 name="windGustSpeed" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Направление ветра в 09:00</label>
+                        <select name="windDir9am" class="form-control">
+                            <option value='N'>С</option>
+                            <option value='NNE'>ССВ</option>
+                            <option value='NE'>СВ</option>
+                            <option value='ENE'>ВСВ</option>
+                            <option value='E'>В</option>
+                            <option value='ESE'>ВЮВ</option>
+                            <option value='SE'>ЮВ</option>
+                            <option value='SSE'>ЮЮВ</option>
+                            <option value='S'>Ю</option>
+                            <option value='SSW'>ЮЮЗ</option>
+                            <option value='SW'>ЮЗ</option>
+                            <option value='WSW'>ЗЮЗ</option>
+                            <option value='W'>З</option>
+                            <option value='NNW'>ССЗ</option>
+                            <option value='WNW'>ЗСЗ</option>
+                            <option value='NW'>СЗ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Направление ветра в 15:00</label>
+                        <select name="windDir3pm" class="form-control">
+                            <option value='N'>С</option>
+                            <option value='NNE'>ССВ</option>
+                            <option value='NE'>СВ</option>
+                            <option value='ENE'>ВСВ</option>
+                            <option value='E'>В</option>
+                            <option value='ESE'>ВЮВ</option>
+                            <option value='SE'>ЮВ</option>
+                            <option value='SSE'>ЮЮВ</option>
+                            <option value='S'>Ю</option>
+                            <option value='SSW'>ЮЮЗ</option>
+                            <option value='SW'>ЮЗ</option>
+                            <option value='WSW'>ЗЮЗ</option>
+                            <option value='W'>З</option>
+                            <option value='NNW'>ССЗ</option>
+                            <option value='WNW'>ЗСЗ</option>
+                            <option value='NW'>СЗ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Скорость ветра в 09:00, м/с</label>
+                        <input type="text" value=5 name="windSpeed9am" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Скорость ветра в 15:00, м/с</label>
+                        <input type="text" value=5 name="windSpeed3pm" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Влажность в 09:00, %</label>
+                        <input type="number" value=45 name="humidity9am" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Влажность в 15:00, % </label>
+                        <input type="text" value=50 name="humidity3pm" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Давление в 09:00, кПа</label>
+                        <input type="text" value=1013 name="pressure9am" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Давлние в 15:00, кПа</label>
+                        <input type="text" value=1007 name="pressure3pm" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Облачность в 09:00</label>
+                        <input type="text" value=0.25 name="cloud9am" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Облачность в 15:00</label>
+                        <input type="text" value=0.6 name="cloud3pm" class="form-control">
+                    </div>
+                    <label class="form-label">Температура в 09:00, С</label>
+                    <input type="number" value=25 name="temp9am" class="form-control">
+                    <div class="form-group">
+                        <label class="form-label">Температура в 15:00, С</label>
+                        <input type="text" value=28 name="temp3pm" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Был ли дождь сегодня</label>
+                        <select name="rainToday" class="form-control">
+                            <option value=1>Да</option>
+                            <option value=0>Нет</option>
+                        </select>
+                    </div>
+
+
+                    <button type="submit" class='btn btn-predict'>Get prediction</button>
+                </form>
+            </div>
+
+            <div class="contact-data">
+                <h2 class="contact-title">DESIGN STUDIO</h2>
+                <ul class="contact-address">
+                    <li><img src="#" alt="">
+                        <p>Homework O9 </p>
+                        <p> Final project</p>
+                    </li>
+                    <li><img src="#" alt="">
+                        <p>ML in Business</p>
+                    </li>
+                    <li>
+                        <p>by Geekbrains</p>
+                    </li>
+                    <li><a href="mailto:#" target="_blank" class="contact-btn"><span>some data</span></a></li>
+                </ul>
+
+            </div>
+            <div class="footer clearfix">
+                <div class="footer-content">
+                    <div class="footer-contact-us footer-div-content">
+                        <h2 class="footer-h2">Contact Us</h2>
+                        <p class="footer-text">Somewhere in the internet <br>
+                            Ukraine.</p> <br>
+                    </div>
+                    <div class="footer-useful-information footer-div-content">
+                        <h2 class="footer-h2">Useful Information</h2>
+                        <ul class="footer-menu">
+                            <li>
+                                <a href="#" class="footer-links">Something useful</a>
+                            </li>
+
+                        </ul>
+                        <ul class="footer-menu">
+                            <li>
+                                <a href="#" class="footer-links">Exchanges & returns</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="footer-stay-in-touch footer-div-content">
+                        <h2 class="footer-h2">Let’s Stay in Touch!</h2>
+                        <p class="footer-text">this field deos not work but it does not matter. It's just a field</p>
+                        <div class="footer-email">
+                            <input type="email" placeholder="your email address" class="footer-send-email">
+                            <a href="#"><img src="img/paper-airplane.png" alt="Email" class="footer-email-img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright clearfix">
+                    <p class="footer-copyright-content">&copy; Copyright - WEATHER PREDICTIONS 2021. Any Rights are not Reserved.</p>
+                    <img src="img/social-links.png" alt="social links" class="footer-copyright-content">
+                    <p class="footer-copyright-content"><a href="#" class="footer-links">Terms & Conditions / Privacy policy & Cookies</a></p>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 107-328-194
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:30:56] "GET /weather/api/v1.0/index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:30:56] "[33mGET /weather/api/v1.0/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:30:56] "[33mGET /weather/api/v1.0/css/miscpages-style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:30:56] "[33mGET /weather/api/v1.0/img/logo_weather.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:30:56] "[33mGET /weather/api/v1.0/img/search.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:30:56] "[33mGET /weather/api/v1.0/img/paper-airplane.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:30:56] "[33mGET /weather/api/v1.0/img/social-links.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:30:56] "GET /weather/api/v1.0/index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:30:56] "[33mGET /weather/api/img/slider-img-shorten.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:30:57] "[32mPOST /weather/api/v1.0/index HTTP/1.1[0m" 302 -
+INFO:numexpr.utils:NumExpr defaulting to 4 threads.
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:30:58] "GET /weather/api/v1.0/getpred?location=Adelaide&minTemp=25&maxTemp=28&rainFall=0.25&evaporation=5.0&sunshine=10.0&windGustDir=N&windGustSpeed=30&windDir9am=N&windDir3pm=N&windSpeed9am=5&windSpeed3pm=5&humidity9am=45&humidity3pm=50&pressure9am=1013&pressure3pm=1007&cloud9am=0.25&cloud3pm=0.6&temp9am=25&temp3pm=28&rainToday=1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:31:01] "GET /weather/api/v1.0/index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:31:06] "[32mPOST /weather/api/v1.0/index HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:31:06] "GET /weather/api/v1.0/getpred?location=MelbourneAirport&minTemp=25&maxTemp=28&rainFall=0.25&evaporation=5.0&sunshine=10.0&windGustDir=N&windGustSpeed=30&windDir9am=N&windDir3pm=N&windSpeed9am=5&windSpeed3pm=5&humidity9am=45&humidity3pm=50&pressure9am=1013&pressure3pm=1007&cloud9am=0.25&cloud3pm=0.6&temp9am=25&temp3pm=28&rainToday=1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:31:09] "GET /weather/api/v1.0/index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:03] "[33mGET /weather/api/v1.0/index.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:20] "GET /weather/api/v1.0/index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:20] "[33mGET /weather/api/v1.0/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:20] "[33mGET /weather/api/v1.0/css/miscpages-style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:20] "[33mGET /weather/api/v1.0/img/logo_weather.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:20] "[33mGET /weather/api/v1.0/img/search.svg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:20] "[33mGET /weather/api/v1.0/img/paper-airplane.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:20] "[33mGET /weather/api/v1.0/img/social-links.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:20] "GET /weather/api/v1.0/index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:20] "[33mGET /weather/api/img/slider-img-shorten.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:22] "[32mPOST /weather/api/v1.0/index HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:23] "GET /weather/api/v1.0/getpred?location=Adelaide&minTemp=25&maxTemp=28&rainFall=0.25&evaporation=5.0&sunshine=10.0&windGustDir=N&windGustSpeed=30&windDir9am=N&windDir3pm=N&windSpeed9am=5&windSpeed3pm=5&humidity9am=45&humidity3pm=50&pressure9am=1013&pressure3pm=1007&cloud9am=0.25&cloud3pm=0.6&temp9am=25&temp3pm=28&rainToday=1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2021 22:32:26] "GET /weather/api/v1.0/index HTTP/1.1" 200 -
