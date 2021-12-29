@@ -1,0 +1,106 @@
+/*careers*/
+.careers {
+    padding-top:  0px;
+}
+
+.careers-propositions {
+ margin-top: 150px;
+ margin-left: 70px;
+}
+
+h2.careers-find-jobs {
+    color: #6c6c6c;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    margin-left: 1px;
+}
+
+.careers-search {
+    float: left;
+}
+
+.careers-fields {
+    line-height: 48px; 
+    margin: 5px;
+    padding-left: 10px;
+    color: #212121;
+    text-transform: capitalize;
+}
+
+.careers-jobs {
+    width: 400px;
+}
+
+.careers-locations: {
+    width: 200px;
+}
+
+.careers-search-button {
+    height: 48px;
+    width: 48px;
+    margin-top: 5px;
+    margin-left: 20px;
+    position: relative;
+    outline: solid #212121 1px; 
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+}
+
+.careers-search-button:hover {
+    box-shadow: none;
+    background-color: #B0B0B0;
+}
+
+.careers-search-button:active {
+    outline: none;
+}
+
+/*contact us*/
+.contact-us {
+    height: 200px;
+    padding-top: 0px;
+} 
+
+
+.contact-data {
+    float:right;
+    margin-top: 25px;
+    margin-right: 100px;
+}
+
+.contact-address {
+    list-style: none;    
+}
+
+.contact-address li {
+    margin-top: 30px;
+    width: 250px;
+}
+
+.contact-btn {
+    text-decoration: none;
+    border: 2px solid #212121;
+    margin-top: 45px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+    text-transform: uppercase;
+}
+
+.contact-btn:hover {
+    background-color: #b0b0b0;
+}
+
+.contact-btn:active {
+    box-shadow: none;
+}
+
+.contact-btn span {
+    color: #212121;
+}
+
+
